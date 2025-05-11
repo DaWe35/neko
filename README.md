@@ -1,3 +1,16 @@
+# Notes for myself:
+
+- I forked the repo to build KDE on bookworm-full
+Build commands:
+
+1. First build the base image: `docker build -t neko-bookworm-full:latest -f runtime/Dockerfile.bookworm-full runtime/`
+
+2. Then build the KDE image: `docker build -t neko-kde -f apps/kde/Dockerfile apps/kde/`
+
+
+___
+
+
 <div align="center">
   <a href="https://github.com/m1k1o/neko" title="Neko's Github repository.">
     <img src="https://neko.m1k1o.net/img/logo.png" width="400" height="auto"/>
