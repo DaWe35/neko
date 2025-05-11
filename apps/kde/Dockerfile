@@ -4,12 +4,14 @@ FROM $BASE_IMAGE
 #
 # install kde
 RUN set -eux; apt-get update; \
-    apt-get install -y --no-install-recommends kde-full kwin-x11 sudo; \
+    apt-get install -y --no-install-recommends kde-full kwin-x11 sudo dbus; \
     #
     # add user to sudoers
     usermod -aG sudo neko; \
     echo "neko:neko" | chpasswd; \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers; \
+    # create dbus directory
+    mkdir -p /run/dbus; \
     # clean up
     apt remove xserver-xorg-legacy -y; \
     apt-get clean -y; \
