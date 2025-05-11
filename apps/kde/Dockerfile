@@ -4,7 +4,7 @@ FROM $BASE_IMAGE
 #
 # install kde
 RUN set -eux; apt-get update; \
-    apt-get install -y --no-install-recommends kde-full kwin-x11 sudo dbus; \
+    apt-get install -y --no-install-recommends kde-full kwin-x11 sudo; \
     #
     # add user to sudoers
     usermod -aG sudo neko; \
