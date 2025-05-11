@@ -8,6 +8,16 @@ Build commands:
 2. Then build the KDE image: `docker build -t neko-kde -f apps/kde/Dockerfile apps/kde/`
 
 
+Build commands for KDE-full:
+
+```
+./build --flavor bookworm-full
+./build --application kde --base_image dawe35/neko/bookworm-full-base:latest
+
+docker run -p 9090:8080 -p 52000-52100:52000-52100/udp --shm-size=2gb neko-kde:latest
+```
+
+
 ___
 
 

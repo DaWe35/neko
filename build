@@ -226,7 +226,7 @@ fi
 log "Using platform: $PLATFORM"
 
 if [ -z "$REPOSITORY" ]; then
-  REPOSITORY="ghcr.io/m1k1o/neko"
+  REPOSITORY="dawe35/neko"
 fi
 log "Using repository: $REPOSITORY"
 

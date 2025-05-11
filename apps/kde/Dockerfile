@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=neko-bookworm-full:latest
+ARG BASE_IMAGE=dawe35/neko/bookworm-full-base:latest
 FROM $BASE_IMAGE
 
 #
