@@ -1,13 +1,6 @@
 # Notes for myself:
 
 - I forked the repo to build KDE on bookworm-full
-Build commands:
-
-1. First build the base image: `docker build -t neko-bookworm-full:latest -f runtime/Dockerfile.bookworm-full runtime/`
-
-2. Then build the KDE image: `docker build -t neko-kde -f apps/kde/Dockerfile apps/kde/`
-
-
 Build commands for KDE-full:
 
 ```
