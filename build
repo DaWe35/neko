@@ -226,7 +226,7 @@ fi
 log "Using platform: $PLATFORM"
 
 if [ -z "$REPOSITORY" ]; then
-  REPOSITORY="ghcr.io/m1k1o/neko"
+  REPOSITORY="dawe35/neko"
 fi
 log "Using repository: $REPOSITORY"
 
@@ -318,6 +318,6 @@ docker run --rm -i \
   -e "RUNTIME_DOCKERFILE=$RUNTIME_DOCKERFILE" \
   --workdir /src \
   --entrypoint go \
-  golang:1.24-bullseye \
+  golang:1.24-bookworm \
   run utils/docker/main.go \
   -i Dockerfile.tmpl -client "$CLIENT_DIST" | build_image $BASE_IMAGE -f - .

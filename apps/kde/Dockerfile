@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=neko-bookworm-full:latest
+ARG BASE_IMAGE=dawe35/neko/bookworm-full-base:latest
 FROM $BASE_IMAGE
 
 #
@@ -10,6 +10,7 @@ RUN set -eux; apt-get update; \
     usermod -aG sudo neko; \
     echo "neko:neko" | chpasswd; \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers; \
+
     # clean up
     apt remove xserver-xorg-legacy -y; \
     apt-get clean -y; \
@@ -23,4 +24,3 @@ RUN kwriteconfig5 --file /home/neko/.config/kscreenlockerrc --group Daemon --key
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/kde.conf
-
